@@ -31,5 +31,4 @@ def predict_remedy():
     predicted_remedy = model.predict(input_disease_tfidf)
     return jsonify({'remedy': predicted_remedy[0]})
 
-if __name__ == '__main__':
-    app.run()
+
