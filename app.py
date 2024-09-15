@@ -22,6 +22,12 @@ model.fit(X_tfidf, y)
 def hello():
     return "Hello, World!"
 
+@app.route("/data",methods=['POST'])
+def demo():
+    data = request.json
+    print("data recived from ardino: "+data)
+    return jsonify({"data":data}),400
+
 # Define a route for prediction
 @app.route('/predict', methods=['POST'])
 def predict_remedy():
